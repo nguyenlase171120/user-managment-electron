@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>User Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="container-title">Quản lý nhân viên</h3>
+      <button class="btn btn-add">Thêm mới</button>
+      <input placeholder="Tìm kiếm tài khoản ( Nhấn phím Enter để thực hiện chức năng )" class="search-user" />
+
+      <div class="content">
+        <table id="table">
+          <tr class="table-head">
+            <th>STT</th>
+            <th>Tên Đăng Nhập</th>
+            <th>Tên Người Dùng</th>
+            <th>Vai trò</th>
+            <th>Ngày Bắt Đầu</th>
+            <th>Số Điện Thoại</th>
+            <th>Ngày Sinh</th>
+            <th>Tùy Chỉnh</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <form id = "form-add-user" action="#">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+  
+          <h2 class="modal-title">Add new user</h2>
+          <div class="modal-group">
+            <label for="ten_dang_nhap">Tên đăng nhập</label>
+            <input class="input-common" id="ten_dang_nhap" required  />
+          </div>
+  
+          <div class="modal-group">
+            <label for="ten_dang_nhap">Tên người dùng</label>
+            <input class="input-common" id="ten_nguoi_dung" required />
+          </div>
+  
+          <div class="modal-half">
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Vai trò</label>
+              <input class="input-common" id="vai_tro"required/>
+            </div>
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Ngày bắt đầu</label>
+              <input class="input-common" id="ngay_bat_dau" type="number" required />
+            </div>
+          </div>
+  
+          <div class="modal-half">
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Số điện thoại</label>
+              <input class="input-common" type="number" id="so_dien_thoai" required />
+            </div>
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Ngày sinh</label>
+              <input class="input-common" id="ngay_sinh" type="date"required />
+            </div>
+          </div>
+  
+          <button class="btn btn-form btn-add-user" type="submit">Add user</button>
+
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal for update -->
+
+    <div class="modal-update">
+      <form id = "form-update-user" action = "#">
+        <div class="modal-content-update">
+          <span class="close">&times;</span>
+  
+          <h2 class="modal-title"">Update user</h2>
+  
+          <div class="modal-group">
+            <label for="ten_dang_nhap">ID</label>
+            <input class="input-common user-id" readonly  />
+          </div>
+          <div class="modal-group">
+            <label for="ten_dang_nhap">Tên đăng nhập</label>
+            <input class="input-common ten_dang_nhap" required />
+          </div>
+  
+          <div class="modal-group">
+            <label for="ten_dang_nhap">Tên người dùng</label>
+            <input class="input-common ten_nguoi_dung" required/>
+          </div>
+  
+          <div class="modal-half">
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Vai trò</label>
+              <input class="input-common vai_tro"  required/>
+            </div>
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Ngày bắt đầu</label>
+              <input class="input-common ngay_bat_dau" type="number" required />
+            </div>
+          </div>
+  
+          <div class="modal-half">
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Số điện thoại</label>
+              <input class="input-common so_dien_thoai" type="number" required  />
+            </div>
+            <div class="modal-group">
+              <label for="ten_dang_nhap">Ngày sinh</label>
+              <input class="input-common ngay_sinh"  type="date" required/>
+            </div>
+          </div>
+  
+          <button class="btn btn-form btn-update-form" type="submit">Update user</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
